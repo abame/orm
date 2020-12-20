@@ -126,7 +126,7 @@ class ExprTest extends OrmTestCase
 
     public function testRoundExpr() : void
     {
-        self::assertEquals('ROUND(0.7819, 2)', (float) $this->expr->round(0.7819, 2));
+        self::assertEquals('ROUND(0.7819, 2)', (string) $this->expr->round(0.7819, 2));
     }
 
     public function testProdExpr() : void

@@ -124,6 +124,11 @@ class ExprTest extends OrmTestCase
         self::assertEquals('MOD(10, 1)', (string) $this->expr->mod(10, 1));
     }
 
+    public function testRoundExpr() : void
+    {
+        self::assertEquals('ROUND(0.7819, 2)', (float) $this->expr->round(0.7819, 2));
+    }
+
     public function testProdExpr() : void
     {
         self::assertEquals('1 * 2', (string) $this->expr->prod(1, 2));

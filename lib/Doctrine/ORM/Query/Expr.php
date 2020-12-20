@@ -340,6 +340,19 @@ class Expr
     }
 
     /**
+     * Creates a ROUND($x, $y) function to return the rounded value of $x with precision of $y.
+     *
+     * @param mixed $x Value that will be rounded
+     * @param mixed $y Precision on which to round the value, ex. 2 digits after decimal point
+     *
+     * @return Expr\Func
+     */
+    public function round($x, $y)
+    {
+        return new Expr\Func('ROUND', [$x, $y]);
+    }
+
+    /**
      * Creates a product mathematical expression with the given arguments.
      *
      * First argument is considered the left expression and the second is the right expression.
